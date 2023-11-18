@@ -27,9 +27,10 @@ section{
     padding: 0px 180px;
     height: 100vh;
 }
-.header{
-    padding: 0px 180px;
+.navbar{
+  padding: 0px 180px;
 }
+
 body{
     background: rgb(2,0,36);
 background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,74,1) 53%, rgba(0,5,6,1) 100%);
@@ -662,9 +663,9 @@ button {
   }
   .services-container{
     text-align: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-top: 3rem;
     gap: 4rem;
     align-items: center;
@@ -894,3 +895,102 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,24,112,1) 50%, rgba
       opacity: 0;
     }
   }
+  .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.footer{
+    text-align: center;
+    font-size: var(--p-font);
+}
+.footer h4{
+    color: var(--text-color);
+    align-items: center;
+}
+.footer h4 a{
+    color: var(--main-color);
+}
+.footer i{
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+.footer i:hover{
+    color: red;
+    font-size: 1.8rem;
+}
+
+@media (max-width : 1300px) {
+  body{
+    background: #0c0a3a;
+    box-sizing: border-box;
+  }
+  section{
+    padding: 65px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .navbar{
+padding:0 65px;
+  }
+}
+@media (max-width : 1030px){
+  .nav-menu{
+    display: none;
+  }
+}
+
+
+@media (max-width : 850px){
+.home{
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  justify-content: space-between;
+}
+.home-text{
+width: 100%;
+text-align: center;
+}
+.home-image .loader{
+display: none;
+}
+.about{
+  flex-direction: column;
+}
+.services-container{
+  grid-template-columns: repeat(2 , auto);
+}
+.projects-container{
+  grid-template-columns: repeat(2 , auto);
+  align-items: center;
+}
+.contact{
+  flex-direction: column;
+  justify-content: space-around;
+}
+section{
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.navbar{
+padding:0 20px;
+}
+:root{
+  --h1-font:3rem;
+  --h2-font:2rem;
+  --p-font:1rem;
+}
+}
+
+@media (max-width : 600px){
+  .services-container{
+    grid-template-columns: repeat(1 , auto);
+    margin-left: 50%;
+  }
+  .projects-container{
+    margin-left: 50%;
+  }
+}
